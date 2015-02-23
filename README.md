@@ -160,7 +160,10 @@ JavaScript library versions need to be updated in `bower.json` and `_config.yml`
 
 ## License
 
-This code is licensed under the MIT license.
+The code and content for this deck is Copyright © 2015 Evan Sosenko.
+
+This deck is built with [Jekyll & deck.js](https://github.com/razor-x/jekyll-and-deck.js)
+which is licensed under the [MIT license](./MIT-LICENSE.txt).
 
 ## Warranty
 

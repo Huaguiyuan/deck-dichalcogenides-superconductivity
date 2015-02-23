@@ -1,8 +1,17 @@
-# Jekyll & deck.js
+# Superconducting phases of monolayer transition-metal dichalcogenides
 
-[![MIT License](https://img.shields.io/badge/license-MIT-red.svg)](./LICENSE.txt)
-[![Dependency Status](https://img.shields.io/gemnasium/razor-x/jekyll-and-deck.js.svg)](https://gemnasium.com/razor-x/jekyll-and-deck.js)
-[![Build Status](https://img.shields.io/travis/razor-x/jekyll-and-deck.js/demo.svg)](https://travis-ci.org/razor-x/jekyll-and-deck.js)
+[![All rights reserved](https://img.shields.io/badge/license-All_rights_reserved-red.svg)](./LICENSE.txt)
+[![Dependency Status](https://img.shields.io/gemnasium/razor-x/deck-dichalcogenides-superconductivity.svg)](https://gemnasium.com/razor-x/jekyll-and-deck.js)
+[![Build Status](https://img.shields.io/travis/razor-x/deck-dichalcogenides-superconductivity.svg)](https://travis-ci.org/razor-x/jekyll-and-deck.js)
+
+**by [Evan Sosenko](https://evansosenko.com/)**
+
+[Contributed Talk, APS March Meeting March 2015, San Antonio, TX, US.](http://meeting.aps.org/Meeting/MAR15/Session/G11.12)
+
+See this and other talks at
+[evansosenko.com](https://evansosenko.com/).
+
+Source for [my deck](https://io.evansosenko.com/deck-dichalcogenides-superconductivity/) running on Jekyll and deck.js.
 
 Source for your deck running on Jekyll and deck.js.
 Just clone and deck.

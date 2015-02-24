@@ -8,4 +8,6 @@ $accent-palette: Blue;
 $primary-shade: 800;
 
 $qrcode: true;
-$logos: ();
+$logos: (
+  ucr: ('ucr-logo.svg', 5.2, 'svg')
+);

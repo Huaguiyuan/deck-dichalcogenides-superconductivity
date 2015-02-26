@@ -4,18 +4,23 @@ layout: deck
 
 {% assign deck = site.data.deck %}
 
-{% slide %}
-  <h2>Bands</h2>
-  {% image bands.svg [no-auto] class="figure" %}
+{% slide : Outline %}
+  <ol>
+    <li>Dichalcogenide Overview</li>
+    <li>Superconducting Phases</li>
+    <li>Optical Transitions</li>
+  </ol>
 {% endslide %}
 
-{% slide %}
-  <h2>Transitions</h2>
-  {% image transitions.svg [no-auto] class="figure" %}
+{% slide : Bands %}
+  <figure>{% image bands.svg [no-auto] %}</figure>
 {% endslide %}
 
-{% slide %}
-  <h2>Excitations</h2>
-  {% image excitations.svg [no-auto] class="figure" %}
+{% slide : Transitions %}
+  <figure>{% image bands.svg [no-auto] %}</figure>
+{% endslide %}
+
+{% slide : Excitations %}
+  <figure>{% image excitations.svg [no-auto] class="figure" %}</figure>
 {% endslide %}
 

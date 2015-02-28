@@ -2,5 +2,20 @@
 // Custom Deck Styles
 //
 
-.lattice-image
-  +background-image('lattice', 500px, 381px)
+article.deck-container
+  p.medium
+    font-size: 1.5rem
+
+  p.small
+    font-size: 1rem
+
+  .lattice-image
+    +background-image('lattice', 250px, 191px)
+
+    @media #{$xga}
+      +background-image('lattice', 500px, 380px)
+
+  header.slide
+    +background-image('lattice', 131px, 100px)
+    background-position: center 42vh
+    min-height: inherit

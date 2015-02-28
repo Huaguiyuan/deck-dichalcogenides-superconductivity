@@ -13,22 +13,70 @@ layout: deck
   <div class="two-thirds center lattice-image"></div>
 {% endslide %}
 
-{% slide : Bands %}
-  <figure class="two-thirds">{% image bands.svg %}</figure>
-  <ul class="one-third">
+{% slide : Hamiltonian %}
+  <div class="one-third lattice-image"></div>
+
+  <ul>
+    <li>Spin-orbit coupling</li>
+    <li>Tight binding model</li>
+    <li>\(d_z, d_{xy}, d_{x^2 - y^2}\)</li>
   </ul>
+
+  <p class="full center medium">
+    $$
+    H_0 =
+      a t \left(τ k_x σ_x + k_y σ_y \right) ⊗ I_2
+      + \frac{Δ}{2} σ_z ⊗ I_2
+      - λ τ \left(σ_z - 1 \right) ⊗ S_z$$
+  </p>
+
+  <p class="full center small">
+    $$
+    H_0 =
+    \left[
+    \begin{matrix}
+      \dfrac{Δ}{2}                     & a t \left( τ k_x - i k_y \right) \\
+      a t \left( τ k_x + i k_y \right) & λ τ σ - \dfrac{Δ}{2}
+    \end{matrix}
+    \right]
+    $$
+  </p>
 {% endslide %}
 
-{% slide : Transitions %}
+{% slide : Energy Bands %}
+  <figure class="two-thirds">{% image bands.svg %}</figure>
+
+  <ul class="medium">
+    <li>\(Δ\) Band splitting</li>
+    <li>\(λ\) Spin splitting</li>
+  </ul>
+
+  <p class="full center medium">
+    $$
+    E_{τ σ}^n \left( \mathbf{k} \right) =
+      \frac{1}{2} \left( λ τ σ
+        + n \sqrt{ (2 a t)^2 \lvert \mathbf{k} \rvert^2
+        + \left( Δ - λ τ σ \right)^2 } \right)
+    $$
+  </p>
+{% endslide %}
+
+{% slide : Intrinsic Superconductivity %}
+{% endslide %}
+
+{% slide : Induced Superconductivity %}
+{% endslide %}
+
+{% slide : Optical Transitions %}
   <figure class="two-thirds center">{% image transitions.svg %}</figure>
 {% endslide %}
 
-{% slide : Excitations %}
+{% slide : SC Optical Excitations %}
   <figure class="half">{% image excitations-1.svg %}</figure>
   <figure class="half">{% image excitations-2.svg %}</figure>
 {% endslide %}
 
-{% slide : Excitations %}
+{% slide : SC Optical Excitations %}
   <figure class="half">{% image excitations-closeup-1.svg %}</figure>
   <figure class="half">{% image excitations-closeup-2.svg %}</figure>
 {% endslide %}

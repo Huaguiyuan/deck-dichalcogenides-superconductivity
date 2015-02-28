@@ -3,11 +3,12 @@
 //
 
 article.deck-container
-  p.medium
-    font-size: 1.5rem
+  @each $tag in p, ol, ul
+    #{$tag}.medium
+      font-size: 1.5rem
 
-  p.small
-    font-size: 1rem
+    #{$tag}.small
+      font-size: 1rem
 
   .lattice-image
     +background-image('lattice', 250px, 191px)

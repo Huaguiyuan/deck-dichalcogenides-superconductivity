@@ -5,19 +5,22 @@ layout: deck
 {% assign deck = site.data.deck %}
 
 {% slide : Outline %}
-  <ol>
+  <ol class="two-thirds center">
     <li>Dichalcogenide Overview</li>
     <li>Superconducting Phases</li>
     <li>Optical Transitions</li>
   </ol>
+  <div class="two-thirds center lattice-image"></div>
 {% endslide %}
 
 {% slide : Bands %}
-  <figure>{% image bands.svg %}</figure>
+  <figure class="two-thirds">{% image bands.svg %}</figure>
+  <ul class="one-third">
+  </ul>
 {% endslide %}
 
 {% slide : Transitions %}
-  <figure>{% image transitions.svg %}</figure>
+  <figure class="two-thirds center">{% image transitions.svg %}</figure>
 {% endslide %}
 
 {% slide : Excitations %}
@@ -25,3 +28,7 @@ layout: deck
   <figure class="half">{% image excitations-2.svg %}</figure>
 {% endslide %}
 
+{% slide : Excitations %}
+  <figure class="half">{% image excitations-closeup-1.svg %}</figure>
+  <figure class="half">{% image excitations-closeup-2.svg %}</figure>
+{% endslide %}

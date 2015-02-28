@@ -4,11 +4,14 @@
 
 article.deck-container
   @each $tag in p, ol, ul
-    #{$tag}.medium
-      font-size: 1.5rem
+    overflow-y: scroll
 
-    #{$tag}.small
-      font-size: 1rem
+    @media #{$xga}
+      #{$tag}.small
+        font-size: 1rem
+
+      #{$tag}.medium
+        font-size: 1.5rem
 
   .lattice-image
     +background-image('lattice', 250px, 191px)

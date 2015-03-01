@@ -4,35 +4,41 @@ layout: deck
 
 {% assign deck = site.data.deck %}
 
+$${% include tex-header.tex %}$$
+
 {% slide : Outline %}
-  <ol class="two-thirds center">
-    <li>Dichalcogenide Overview</li>
-    <li>Superconducting Phases</li>
-    <li>Optical Transitions</li>
+  <ol class="large two-thirds center">
+    <li>Dichalcogenides overview</li>
+    <li>Superconducting phases</li>
+    <li>Optical transitions</li>
   </ol>
-  <div class="two-thirds center lattice-image"></div>
+  <div class="lattice-image two-thirds center"></div>
 {% endslide %}
 
 {% slide : Hamiltonian %}
-  <div class="one-third lattice-image"></div>
+  <div class="lattice-image half"></div>
 
-  <ul>
-    <li>Spin-orbit coupling</li>
+  <ul class="half omega">
+    <li>Similar to monolayer graphene: two inequivalent valleys</li>
+    <li>Strong spin-orbit coupling</li>
+    <li>Inversion symmetry breaking</li>
+    <li>Opposite valley Berry curvature</li>
     <li>Tight binding model</li>
     <li>\(d_z, d_{xy}, d_{x^2 - y^2}\)</li>
   </ul>
 
-  <p class="full center medium">
+  <p class="full center">
     $$
-    H_0 =
+    H_0^{τ σ} \exOfK =
       a t \left(τ k_x σ_x + k_y σ_y \right) ⊗ I_2
       + \frac{Δ}{2} σ_z ⊗ I_2
-      - λ τ \left(σ_z - 1 \right) ⊗ S_z$$
+      - λ τ \left(σ_z - 1 \right) ⊗ S_z
+    $$
   </p>
 
-  <p class="full center small">
+  <p class="small full center">
     $$
-    H_0 =
+    H_0^{τ σ} \exOfK =
     \left[
     \begin{matrix}
       \dfrac{Δ}{2}                     & a t \left( τ k_x - i k_y \right) \\
@@ -44,39 +50,141 @@ layout: deck
 {% endslide %}
 
 {% slide : Energy Bands %}
-  <figure class="two-thirds">{% image bands.svg %}</figure>
+  <figure class="two-thirds">
+    {% image bands.svg %}
+  </figure>
 
-  <ul class="medium">
+  <ul class="one-third omega">
     <li>\(Δ\) Band splitting</li>
     <li>\(λ\) Spin splitting</li>
   </ul>
 
-  <p class="full center medium">
+  <p class="full center omega">
     $$
-    E_{τ σ}^n \left( \mathbf{k} \right) =
+    E_{τ σ}^n \exOfK =
       \frac{1}{2} \left( λ τ σ
-        + n \sqrt{ (2 a t)^2 \lvert \mathbf{k} \rvert^2
+      + n \sqrt{ (2 a t)^2 \left\lvert \vect{k} \right\rvert^2
         + \left( Δ - λ τ σ \right)^2 } \right)
     $$
   </p>
 {% endslide %}
 
 {% slide : Intrinsic Superconductivity %}
+  <h3>Density-density interaction</h3>
+
+  <p class="small full center omega">
+    $$
+    \begin{align}
+      H_V = -
+        \frac{1}{2}
+        \sideset{}{'}∑_{\substack{\vK, \vK' \\ \vect{q}}}
+        \sideset{}{}∑_{\substack{ν, σ \\ ν', σ'}}
+        \sideset{}{'}∑_{\substack{τ, \bar{τ} \\ τ', \bar{τ}'}}
+        v \left( \vect{q} + \left( \bar{τ} - τ \right) \vK \right)
+        ×
+        {a^ν_{\bar{τ} σ}}^†      \left( \vK  + \vect{q} \right)
+        {a^{ν'}_{\bar{τ}' σ'}}^† \left( \vK' - \vect{q} \right)
+         a^{ν'}_{τ' σ'}          \left( \vK' \right)
+         a^ν_{τ σ}               \left( \vK  \right)
+    \end{align}
+    $$
+  </p>
+
+  <h3>Projecting to the lower band</h3>
+
+  <ul class="full omega">
+    <li>Project to the upper \(n = -1\) bands \(τ = σ\)</li>
+    <li>Intra and inter valley scattering terms</li>
+  </ul>
+
+  <p class="small full center omega">
+    $$
+    \begin{align}
+      H_V = -
+        \frac{1}{2}
+        \sideset{}{'}∑_{\vK, \vK'}
+        v \left( \vK' - \vK \right)
+        ×
+        & B^2 \left( \vK, \vK' \right) \exInteration{+ ↑}{+ ↑}
+        \\ +
+        & B^2 \left( \vK', \vK \right) \exInteration{- ↓}{- ↓}
+        \\ +
+        & \left\lvert B \left( \vK, \vK' \right) \right\rvert^2
+        \left[
+          \exInteration{+ ↑}{- ↓}
+          \\ +
+          \exInteration{- ↓}{+ ↑}
+        \right] ,
+    \end{align}
+    $$
+  </p>
 {% endslide %}
 
 {% slide : Induced Superconductivity %}
+  <h3>Inter-valley pairing</h3>
+
+  <p class="small full center omega">
+    $$
+    \begin{equation}
+      H_V = -
+        \sideset{}{'}∑_{\vK} \sideset{}{}∑_{ν, τ} Δ_ν
+        {a^ν_{-τ ↓}}^† \exOfMK
+        {a^ν_{τ ↑}}^†  \exOfK
+        + \hc
+    \end{equation}
+    $$
+  </p>
+
+  <h3>Standard BCS Hamiltonian</h3>
+
+  <ul class="full omega">
+    <li>BCS pairs in opposite valleys</li>
+    <li>\(α = τ = σ\)</li>
+  </ul>
+
+  <p class="small full center omega">
+    $$
+    \begin{equation}
+      H - μ N =
+        \sideset{}{'}∑_{\vK} \sideset{}{}∑_α λ_{\vK}^α b_{\vK α}^† b_{\vK α}
+          + \sideset{}{'}∑_{\vK} \left(ξ_{\vK ↓} + λ_{\vK}^- \right) .
+    \end{equation}
+    $$
+  </p>
 {% endslide %}
 
 {% slide : Optical Transitions %}
-  <figure class="two-thirds center">{% image transitions.svg %}</figure>
+  <figure class="two-thirds">
+    {% image transitions.svg %}
+    <figcaption>Optical transition rate</figcaption>
+  </figure>
+
+  <ul class="one-third omega">
+    <li>Optical polarization couples to valley index</li>
+  </ul>
+
+  <div>
+    <p class="two-thirds omega">\(\vect{P}^{τ σ} \exOfK = \left\lvert \left\langle u_+ \right\rvert ∇_{\vK} H_0^{τ σ} \exOfK \left\lvert u_- \right\rangle \right\rvert^2\)</p>
+    <p class="two-thirds omega">\(P_±^{τ σ} \exOfK = P_x^{τ σ} ± i  P_y^{τ σ}\)</p>
+  </div>
 {% endslide %}
 
 {% slide : SC Optical Excitations %}
-  <figure class="half">{% image excitations-1.svg %}</figure>
-  <figure class="half">{% image excitations-2.svg %}</figure>
+  <figure class="half">
+    {% image excitations-1.svg %}
+  </figure>
+
+  <figure class="half omega">
+    {% image excitations-2.svg %}
+  </figure>
 {% endslide %}
 
 {% slide : SC Optical Excitations %}
-  <figure class="half">{% image excitations-closeup-1.svg %}</figure>
-  <figure class="half">{% image excitations-closeup-2.svg %}</figure>
+  <figure class="half">
+    {% image excitations-closeup-1.svg %}
+  </figure>
+
+  <figure class="half omega">
+    {% image excitations-closeup-2.svg %}
+  </figure>
 {% endslide %}

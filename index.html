@@ -7,59 +7,72 @@ layout: deck
 $${% include tex-header.tex %}$$
 
 {% slide : Outline %}
-  <ol class="large two-thirds center">
+  <ol class="half center">
     <li>Dichalcogenides overview</li>
     <li>Superconducting phases</li>
     <li>Optical transitions</li>
+    <li>Superconducting optical excitations</li>
   </ol>
+
   <div class="lattice-image two-thirds center"></div>
 {% endslide %}
 
-{% slide : Hamiltonian %}
+{% slide : Effective Hamiltonian %}
   <div class="lattice-image half"></div>
 
   <ul class="half omega">
-    <li>Similar to monolayer graphene: two inequivalent valleys</li>
+    <li>\(\mathrm{MoS_2}\), \(\mathrm{WS_2}\), \(\mathrm{MoSe_2}\), \(\mathrm{WSe_2}\)</li>
+    <li>Similar to monolayer graphene:
+        two inequivalent valleys: \(\vect{K}\), \(\vect{K}'\)</li>
     <li>Strong spin-orbit coupling</li>
     <li>Inversion symmetry breaking</li>
     <li>Opposite valley Berry curvature</li>
-    <li>Tight binding model</li>
-    <li>\(d_z, d_{xy}, d_{x^2 - y^2}\)</li>
+    <li>Tight binding model: \(d_z, d_{xy}, d_{x^2 - y^2}\)</li>
   </ul>
 
-  <p class="full center">
-    $$
-    H_0^{τ σ} \exOfK =
-      a t \left(τ k_x σ_x + k_y σ_y \right) ⊗ I_2
-      + \frac{Δ}{2} σ_z ⊗ I_2
-      - λ τ \left(σ_z - 1 \right) ⊗ S_z
-    $$
-  </p>
+  {% slide div %}
+    <p class="full center">
+      $$
+      H_0^{τ σ} \exOfK =
+        a t \left(τ k_x σ_x + k_y σ_y \right) ⊗ I_2
+        + \frac{Δ}{2} σ_z ⊗ I_2
+        - λ τ \left(σ_z - 1 \right) ⊗ S_z
+      $$
+    </p>
 
-  <p class="small full center">
-    $$
-    H_0^{τ σ} \exOfK =
-    \left[
-    \begin{matrix}
-      \dfrac{Δ}{2}                     & a t \left( τ k_x - i k_y \right) \\
-      a t \left( τ k_x + i k_y \right) & λ τ σ - \dfrac{Δ}{2}
-    \end{matrix}
-    \right]
-    $$
-  </p>
+    <p class="small full center">
+      $$
+      H_0^{τ σ} \exOfK =
+      \left[
+      \begin{matrix}
+        \dfrac{Δ}{2}                     & a t \left( τ k_x - i k_y \right) \\
+        a t \left( τ k_x + i k_y \right) & λ τ σ - \dfrac{Δ}{2}
+      \end{matrix}
+      \right]
+      $$
+    </p>
+
+    <p class="small full">{% reference PhysRevLett.108.196802 %}</p>
+  {% endslide %}
 {% endslide %}
 
 {% slide : Energy Bands %}
   <figure class="two-thirds">
     {% image bands.svg %}
+    <figcaption>The eight energy bands for \(\mathrm{MoS_2}\).</figcaption>
   </figure>
 
   <ul class="one-third omega">
-    <li>\(Δ\) Band splitting</li>
-    <li>\(λ\) Spin splitting</li>
+    <li>\(Δ\)—band splitting</li>
+    <li>\(λ\)—spin splitting</li>
+    <li>\(τ\)—valley index</li>
+    <li>\(σ\)—spin index</li>
+    <li>\(a t = 3.15 \: \text{Å eV}\)</li>
+    <li>\(Δ = 1.66 \: \text{eV}\)</li>
+    <li>\(2 λ = 0.15 \: \text{eV}\)</li>
   </ul>
 
-  <p class="full center omega">
+  <p class="two-thirds omega">
     $$
     E_{τ σ}^n \exOfK =
       \frac{1}{2} \left( λ τ σ
@@ -90,11 +103,12 @@ $${% include tex-header.tex %}$$
     $$
   </p>
 
-  <h3>Projecting to the lower band</h3>
-
   <ul class="full omega">
-    <li>Project to the upper \(n = -1\) bands \(τ = σ\)</li>
+    <li>\(a^ν_{τ σ}\)—orbital operators</li>
+    <li>\(c^n_{τ σ}\)—unperturbed eigenstate operators</li>
+    <li>Project to the \(n = -1\), \(τ = σ\) band</li>
     <li>Intra and inter valley scattering terms</li>
+    <li>Next step: mean-field analysis</li>
   </ul>
 
   <p class="small full center omega">
@@ -121,7 +135,7 @@ $${% include tex-header.tex %}$$
 {% endslide %}
 
 {% slide : Induced Superconductivity %}
-  <h3>Inter-valley pairing</h3>
+  <h3>Intervalley pairing</h3>
 
   <p class="small full center omega">
     $$
@@ -135,11 +149,13 @@ $${% include tex-header.tex %}$$
     $$
   </p>
 
-  <h3>Standard BCS Hamiltonian</h3>
-
   <ul class="full omega">
+    <li>\(a^ν_{τ σ}\)—orbital operators</li>
+    <li>\(b_α\)—quasiparticle operators</li>
     <li>BCS pairs in opposite valleys</li>
     <li>\(α = τ = σ\)</li>
+    <li>Reduces to standard BCS Hamiltonian
+        where \(α\) plays the role of the spin index</li>
   </ul>
 
   <p class="small full center omega">
@@ -156,35 +172,71 @@ $${% include tex-header.tex %}$$
 {% slide : Optical Transitions %}
   <figure class="two-thirds">
     {% image transitions.svg %}
-    <figcaption>Optical transition rate</figcaption>
+    <figcaption>Optical transition rates for \(H_0\).</figcaption>
   </figure>
 
   <ul class="one-third omega">
-    <li>Optical polarization couples to valley index</li>
+    <li>Polarization couples to valley index</li>
+    <li>Right circular polarization strongly couples to \(τ = +\) valley transitions</li>
+    <li>Left circular polarization strongly couples to \(τ = -\) valley transitions</li>
   </ul>
 
-  <div>
-    <p class="two-thirds omega">\(\vect{P}^{τ σ} \exOfK = \left\lvert \left\langle u_+ \right\rvert ∇_{\vK} H_0^{τ σ} \exOfK \left\lvert u_- \right\rangle \right\rvert^2\)</p>
-    <p class="two-thirds omega">\(P_±^{τ σ} \exOfK = P_x^{τ σ} ± i  P_y^{τ σ}\)</p>
-  </div>
+  <p class="two-thirds omega">
+    \(\vect{P}^{τ σ} \exOfK =
+      \left\lvert \left\langle u_+ \right\rvert ∇_{\vK} H_0^{τ σ} \exOfK
+      \left\lvert u_- \right\rangle \right\rvert^2\)
+  </p>
+
+  <p class="two-thirds omega">
+    \(P_±^{τ σ} \exOfK = P_x^{τ σ} ± i P_y^{τ σ}\)
+  </p>
+
+  <p class="small full">{% reference PhysRevLett.108.196802 %}</p>
 {% endslide %}
 
 {% slide : SC Optical Excitations %}
   <figure class="half">
     {% image excitations-1.svg %}
+    <figcaption>Induced superconducting optical transition rates for \(n = τ\) excitations.</figcaption>
   </figure>
 
   <figure class="half omega">
     {% image excitations-2.svg %}
+    <figcaption>Induced superconducting optical transition rates for \(n = - τ\) excitations.</figcaption>
   </figure>
+
+  <p class="half">
+    \(\vect{P} \exOfK =
+      \left\lvert \left\langle Ω_f \right\rvert ∇_{\vK} H_0^{τ σ} \exOfK
+      \left\lvert Ω \right\rangle \right\rvert^2\)
+  </p>
+
+  <p class="half omega">
+     \(\left\lvert Ω \right\rangle
+     = ∏_{\vK} b_{\vK ↑} b_{-\vK ↓} \left\lvert 0 \right\rangle\)
+  </p>
+
+  <p class="half">
+    \(P_± \exOfK = P_x ± i P_y\)
+  </p>
+
+  <p class="half omega">
+     \(\left\lvert Ω_f \right\rangle =
+       \begin{cases}
+       {c^+_α}^† \exOfK b_{-α} \exOfMK \left\lvert Ω_f \right\rangle &amp; k &gt; k_μ \\
+       {c^+_α}^† \exOfK b_{-α}^† \exOfMK \left\lvert Ω_f \right\rangle &amp; k &lt; k_μ
+       \end{cases}\)
+  </p>
 {% endslide %}
 
 {% slide : SC Optical Excitations %}
   <figure class="half">
     {% image excitations-closeup-1.svg %}
+    <figcaption>Strong optical transition rates. Dashed lines are \(H_0\) transitions.</figcaption>
   </figure>
 
   <figure class="half omega">
     {% image excitations-closeup-2.svg %}
+    <figcaption>Weak optical transition rates. Dashed lines are \(H_0\) transitions.</figcaption>
   </figure>
 {% endslide %}

@@ -83,58 +83,6 @@ $${% include tex-header.tex %}$$
   </p>
 {% endslide %}
 
-{% slide : Intrinsic Superconductivity %}
-  <h3>Density-density interaction</h3>
-
-  <p class="small full center omega">
-    $$
-    \begin{align}
-      H_V = -
-        \frac{1}{2}
-        \sideset{}{'}∑_{\substack{\vK, \vK' \\ \vect{q}}}
-        \sideset{}{}∑_{\substack{ν, σ \\ ν', σ'}}
-        \sideset{}{'}∑_{\substack{τ, \bar{τ} \\ τ', \bar{τ}'}}
-        v \left( \vect{q} + \left( \bar{τ} - τ \right) \vK \right)
-        ×
-        {a^ν_{\bar{τ} σ}}^†      \left( \vK  + \vect{q} \right)
-        {a^{ν'}_{\bar{τ}' σ'}}^† \left( \vK' - \vect{q} \right)
-         a^{ν'}_{τ' σ'}          \left( \vK' \right)
-         a^ν_{τ σ}               \left( \vK  \right)
-    \end{align}
-    $$
-  </p>
-
-  <ul class="full omega">
-    <li>\(a^ν_{τ σ}\)—orbital operators</li>
-    <li>\(c^n_{τ σ}\)—unperturbed eigenstate operators</li>
-    <li>Project to the \(n = -1\), \(τ = σ\) band</li>
-    <li>Intra and inter valley scattering terms</li>
-    <li>Next step: mean-field analysis</li>
-  </ul>
-
-  <p class="small full center omega">
-    $$
-    \begin{align}
-      H_V = -
-        \frac{1}{2}
-        \sideset{}{'}∑_{\vK, \vK'}
-        v \left( \vK' - \vK \right)
-        ×
-        & B^2 \left( \vK, \vK' \right) \exInteration{+ ↑}{+ ↑}
-        \\ +
-        & B^2 \left( \vK', \vK \right) \exInteration{- ↓}{- ↓}
-        \\ +
-        & \left\lvert B \left( \vK, \vK' \right) \right\rvert^2
-        \left[
-          \exInteration{+ ↑}{- ↓}
-          \\ +
-          \exInteration{- ↓}{+ ↑}
-        \right] ,
-    \end{align}
-    $$
-  </p>
-{% endslide %}
-
 {% slide : Induced Superconductivity %}
   <h3>Intervalley pairing</h3>
 

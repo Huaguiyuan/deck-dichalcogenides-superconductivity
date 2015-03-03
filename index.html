@@ -24,9 +24,9 @@ $${% include tex-header.tex %}$$
     <li>\(\mathrm{MoS_2}\), \(\mathrm{WS_2}\), \(\mathrm{MoSe_2}\), \(\mathrm{WSe_2}\)</li>
     <li>Similar to monolayer graphene:
         two inequivalent valleys: \(\vect{K}\), \(\vect{K}'\)</li>
-    <li>Strong spin-orbit coupling</li>
-    <li>Inversion symmetry breaking</li>
-    <li>Opposite valley Berry curvature</li>
+    <li>Strong <strong>spin-orbit coupling</strong>
+        and <strong>inversion symmetry breaking</strong></li>
+    <li>Leads to opposite valley Berry curvature</li>
     <li>Tight binding model: \(d_z, d_{xy}, d_{x^2 - y^2}\)</li>
   </ul>
 
@@ -62,16 +62,23 @@ $${% include tex-header.tex %}$$
     <figcaption>The eight energy bands for \(\mathrm{MoS_2}\).</figcaption>
   </figure>
 
-  <ul class="one-third omega">
-    <li>\(Δ\)—band splitting</li>
-    <li>\(λ\)—spin splitting</li>
-    <li>\(τ\)—valley index</li>
-    <li>\(σ\)—spin index</li>
-    <li>\(a t = 3.15 \: \text{Å eV}\)</li>
-    <li>\(Δ = 1.66 \: \text{eV}\)</li>
-    <li>\(2 λ = 0.15 \: \text{eV}\)</li>
-    <li>\(μ = -0.83 \: \text{eV}\)</li>
-  </ul>
+  <div class="one-third omega">
+    <ul>
+      <li>\(Δ\)—band splitting</li>
+      <li>\(λ\)—spin splitting</li>
+      <li>\(τ\)—valley index</li>
+      <li>\(σ\)—spin index</li>
+    </ul>
+
+    <h3>\(\mathrm{MoS_2}\)</h3>
+
+    <ul>
+      <li>\(a t = 3.15 \: \text{Å eV}\)</li>
+      <li>\(Δ = 1.66 \: \text{eV}\)</li>
+      <li>\(2 λ = 0.15 \: \text{eV}\)</li>
+      <li>\(μ = -0.83 \: \text{eV}\)</li>
+    </ul>
+  </div>
 
   <p class="full omega">
     $$
@@ -88,7 +95,7 @@ $${% include tex-header.tex %}$$
 
   <figure class="half">
     {% image superconducting_states.svg %}
-    <figcaption>Optical transition rates for \(H_0\).</figcaption>
+    <figcaption>BCS pairs for induced superconducting states.</figcaption>
   </figure>
 
   <div class="half omega">
@@ -96,9 +103,8 @@ $${% include tex-header.tex %}$$
       <li>\(a^ν_{τ σ}\)—orbital operators</li>
       <li>\(b_α\)—quasiparticle operators</li>
       <li>BCS pairs in opposite valleys</li>
-      <li>\(α = τ = σ\)</li>
       <li>Reduces to standard BCS Hamiltonian
-          where \(α\) plays the role of the spin index</li>
+          where \(α = τ = σ\) plays the role of the spin index</li>
     </ul>
 
     <p class="small full center omega">
@@ -138,10 +144,10 @@ $${% include tex-header.tex %}$$
 
   <div class="half">
     <p>
-      \(\left\lvert \vect{P}^{τ σ} \exOfK \right\rvert^2 =
-        \left( m_0 / ħ \right)^2
-        \left\lvert \left\langle u_+ \right\rvert ∇_{\vK} H_0^{τ σ} \exOfK
-        \left\lvert u_- \right\rangle \right\rvert^2\)
+      \(\vect{P}^{τ σ} \exOfK =
+        \frac{m_0}{ħ}
+        \left\langle u_+ \right\rvert ∇_{\vK} H_0^{τ σ} \exOfK
+        \left\lvert u_- \right\rangle\)
     </p>
 
     <p>
@@ -170,10 +176,10 @@ $${% include tex-header.tex %}$$
 
   <div class="half">
     <p>
-      \(\left\lvert \vect{P} \exOfK \right\rvert^2 =
-        \left( m_0 / ħ \right)^2
-        \left\lvert \left\langle Ω_f \right\rvert ∇_{\vK} H^{τ σ} \exOfK
-        \left\lvert Ω \right\rangle \right\rvert^2\)
+      \(\vect{P} \exOfK =
+        \frac{m_0}{ħ}
+        \left\langle Ω_f \right\rvert ∇_{\vK} H^{τ σ} \exOfK
+        \left\lvert Ω \right\rangle\)
     </p>
 
     <p>

@@ -21,13 +21,13 @@ $${% include tex-header.tex %}$$
   <div class="lattice-image half"></div>
 
   <ul class="half omega">
-    <li>\(\mathrm{MoS_2}\), \(\mathrm{WS_2}\), \(\mathrm{MoSe_2}\), \(\mathrm{WSe_2}\)</li>
+    <li>\( \mathrm{MoS_2} \), \( \mathrm{WS_2} \), \( \mathrm{MoSe_2} \), \( \mathrm{WSe_2} \)</li>
     <li>Similar to monolayer graphene:
-        two inequivalent valleys: \(\vect{K}\), \(\vect{K}'\)</li>
+        two inequivalent valleys: \( \vect{K} \), \( \vect{K}' \)</li>
     <li>Strong <strong>spin-orbit coupling</strong>
         and <strong>inversion symmetry breaking</strong></li>
     <li>Leads to opposite valley Berry curvature</li>
-    <li>Tight binding model: \(d_{z^2}, d_{xy}, d_{x^2 - y^2}\)</li>
+    <li>Tight binding model: \( d_{z^2}, d_{xy}, d_{x^2 - y^2} \)</li>
   </ul>
 
   {% slide div %}
@@ -59,24 +59,24 @@ $${% include tex-header.tex %}$$
 {% slide : Energy Bands %}
   <figure class="two-thirds">
     {% image bands.svg %}
-    <figcaption>The eight energy bands for \(\mathrm{MoS_2}\).</figcaption>
+    <figcaption>The eight energy bands for \( \mathrm{MoS_2} \).</figcaption>
   </figure>
 
   <div class="one-third omega">
     <ul>
-      <li>\(Δ\)—band splitting</li>
-      <li>\(λ\)—spin splitting</li>
-      <li>\(τ\)—valley index</li>
-      <li>\(σ\)—spin index</li>
+      <li>\( Δ \)—band splitting</li>
+      <li>\( λ \)—spin splitting</li>
+      <li>\( τ \)—valley index</li>
+      <li>\( σ \)—spin index</li>
     </ul>
 
-    <h3>\(\mathrm{MoS_2}\)</h3>
+    <h3>\( \mathrm{MoS_2} \)</h3>
 
     <ul>
-      <li>\(a t = 3.15 \: \text{Å eV}\)</li>
-      <li>\(Δ = 1.66 \: \text{eV}\)</li>
-      <li>\(2 λ = 0.15 \: \text{eV}\)</li>
-      <li>\(μ = -0.83 \: \text{eV}\)</li>
+      <li>\( a t = 3.15 \: \text{Å eV} \)</li>
+      <li>\( Δ = 1.66 \: \text{eV} \)</li>
+      <li>\( 2 λ = 0.15 \: \text{eV} \)</li>
+      <li>\( μ = -0.83 \: \text{eV} \)</li>
     </ul>
   </div>
 
@@ -100,11 +100,11 @@ $${% include tex-header.tex %}$$
 
   <div class="half omega">
     <ul class="full omega">
-      <li>\(a^ν_{τ σ}\)—orbital operators</li>
-      <li>\(b_α\)—quasiparticle operators</li>
+      <li>\( a^ν_{τ σ} \)—orbital operators</li>
+      <li>\( b_α \)—quasiparticle operators</li>
       <li>BCS pairs in opposite valleys</li>
       <li>Reduces to standard BCS Hamiltonian
-          where \(α = τ = σ\) plays the role of the spin index</li>
+          where \( α = τ = σ \) plays the role of the spin index</li>
       <li>Not a singlet ground state: mixture of singlet and triplet states</li>
     </ul>
 
@@ -135,7 +135,7 @@ $${% include tex-header.tex %}$$
 {% slide : Optical Transitions %}
   <figure class="half">
     {% image transitions.svg %}
-    <figcaption>Optical transition rates for \(H_0\).</figcaption>
+    <figcaption>Optical transition rates for \( H_0 \).</figcaption>
   </figure>
 
   <figure class="half omega">
@@ -145,20 +145,20 @@ $${% include tex-header.tex %}$$
 
   <div class="half">
     <p>
-      \(\vect{P}^{τ σ} \exOfK =
+      \( \vect{P}^{τ σ} \exOfK =
         \frac{m_0}{ħ}
         \left\langle u_+ \right\rvert ∇_{\vK} H_0^{τ σ} \exOfK
-        \left\lvert u_- \right\rangle\)
+        \left\lvert u_- \right\rangle \)
     </p>
 
     <p>
-      \(P_±^{τ σ} \exOfK = P_x^{τ σ} ± i P_y^{τ σ}\)
+      \( P_±^{τ σ} \exOfK = P_x^{τ σ} ± i P_y^{τ σ} \)
     </p>
   </div>
 
   <ul class="half omega">
-    <li>Right circular polarization strongly couples to \(τ = +\) valley transitions</li>
-    <li>Left circular polarization strongly couples to \(τ = -\) valley transitions</li>
+    <li>Right circular polarization strongly couples to \( τ = + \) valley transitions</li>
+    <li>Left circular polarization strongly couples to \( τ = - \) valley transitions</li>
   </ul>
 
   <p class="small full">{% reference PhysRevLett.108.196802 %}</p>
@@ -167,39 +167,39 @@ $${% include tex-header.tex %}$$
 {% slide : SC Optical Excitations %}
   <figure class="half">
     {% image excitations-1.svg %}
-    <figcaption>Induced superconducting optical transition rates for \(τ = +\).</figcaption>
+    <figcaption>Induced superconducting optical transition rates for \( τ = + \).</figcaption>
   </figure>
 
   <figure class="half omega">
     {% image excitations-2.svg %}
-    <figcaption>Induced superconducting optical transition rates for \(τ = -\).</figcaption>
+    <figcaption>Induced superconducting optical transition rates for \( τ = - \).</figcaption>
   </figure>
 
   <div class="half">
     <p>
-      \(\vect{P} \exOfK =
+      \( \vect{P} \exOfK =
         \frac{m_0}{ħ}
         \left\langle Ω_f \right\rvert ∇_{\vK} H^{τ σ} \exOfK
-        \left\lvert Ω \right\rangle\)
+        \left\lvert Ω \right\rangle \)
     </p>
 
     <p>
-      \(P_± \exOfK = P_x ± i P_y\)
+      \( P_± \exOfK = P_x ± i P_y \)
     </p>
   </div>
 
   <div class="half omega">
     <p>
-       \(\left\lvert Ω \right\rangle
-       = ∏_{\vK} b_{\vK ↑} b_{-\vK ↓} \left\lvert 0 \right\rangle\)
+       \( \left\lvert Ω \right\rangle
+       = ∏_{\vK} b_{\vK ↑} b_{-\vK ↓} \left\lvert 0 \right\rangle \)
     </p>
 
     <p>
-       \(\left\lvert Ω_f \right\rangle =
+       \( \left\lvert Ω_f \right\rangle =
          \begin{cases}
          {c^+_α}^† \exOfK b_{-α} \exOfMK \left\lvert Ω \right\rangle &amp; k &gt; k_μ \\
          {c^+_α}^† \exOfK b_{-α}^† \exOfMK \left\lvert Ω \right\rangle &amp; k &lt; k_μ
-         \end{cases}\)
+         \end{cases} \)
     </p>
   </div>
 {% endslide %}
@@ -209,12 +209,12 @@ $${% include tex-header.tex %}$$
 
   <figure class="half">
     {% image excitations-closeup-1.svg %}
-    <figcaption>Strong induced superconducting optical transition rates. Dashed lines are \(H_0\) transitions.</figcaption>
+    <figcaption>Strong induced superconducting optical transition rates. Dashed lines are \( H_0 \) transitions.</figcaption>
   </figure>
 
   <figure class="half omega">
     {% image excitations-closeup-2.svg %}
-    <figcaption>Weak induced superconducting optical transition rates. Dashed lines are \(H_0\) transitions.</figcaption>
+    <figcaption>Weak induced superconducting optical transition rates. Dashed lines are \( H_0 \) transitions.</figcaption>
   </figure>
 
   <ul class="full">

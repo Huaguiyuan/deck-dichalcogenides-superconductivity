@@ -1,7 +1,7 @@
 ---
 # Jekyll options.
-domain: https://io.evansosenko.com/deck-dichalcogenides-superconductivity
-baseurl: https://io.evansosenko.com/deck-dichalcogenides-superconductivity
+domain: https://evansosenko.com/deck-dichalcogenides-superconductivity
+baseurl: https://evansosenko.com/deck-dichalcogenides-superconductivity
 markdown: redcarpet
 highlighter: pygments
 exclude:
@@ -30,7 +30,7 @@ gems:
 
 # Jekyll::AssetsPlugin options.
 assets:
-  baseurl: https://io.evansosenko.com/deck-dichalcogenides-superconductivity/assets/
+  baseurl: https://evansosenko.com/deck-dichalcogenides-superconductivity/assets/
   sources:
     - _assets/images
     - _assets/javascripts

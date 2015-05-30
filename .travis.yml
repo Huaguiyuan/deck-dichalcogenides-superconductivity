@@ -23,14 +23,3 @@ before_install:
   - 'echo ''gem: --no-document'' > ~/.gemrc'
 
 script: bundle exec rake travis
-
-# Set the branch that will be built and published to GitHub pages.
-branches:
-  only:
-    - master
-
-# Run the command below (fill in your name and email):
-# $ travis encrypt 'GIT_NAME="Your Name" GIT_EMAIL=you@example.com'
-# Replace the value of secure with your generated value.
-env:
-  - secure: "f+yamCY3gs4mGZJu/017N5eNsHPNLjqx7FPCJ605uo/nlOErXk9LYmtg8xg1eG6K+m+lOFNivtvRNp1J2ZXi1gGd2xI3yqMWTRHpWhRsszMQC/WW9HyOwcF9addAoDO4JGnp35msK1dKYV10OSc04oGoFr4e0fopL5VCo5EvvKc="
